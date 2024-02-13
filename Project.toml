@@ -1,0 +1,10 @@
+name = "R3BP"
+uuid = "56108d5f-ffd8-4507-8f43-1b5c78981c73"
+authors = ["Yuri <50186716+Yuricst@users.noreply.github.com>"]
+version = "0.1.0"
+
+[deps]
+AstrodynamicsBase = "57933daa-df0e-420d-8f23-cd8ea4acb30f"
+GLMakie = "e9467ef8-e4e7-5192-8a1a-b1aee30e663a"
+Printf = "de0858da-6303-5e67-8744-51eddeeeb8d7"
+Roots = "f2b01f46-fcfa-551c-844a-d8ac1e96c665"
