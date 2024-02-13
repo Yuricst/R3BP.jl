@@ -14,6 +14,6 @@ include("ode/eoms.jl")
 
 abstract type R3BPPropagator end
 include("ode/propagator_cr3bp.jl")
-
+include("ode/propagator_bcr4bp.jl")
 
 end # module R3BP
