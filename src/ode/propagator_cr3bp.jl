@@ -11,6 +11,7 @@ mutable struct CR3BPPropagator <: R3BPPropagator
     method
     reltol::Float64
     abstol::Float64
+    eom!::Function
 
     function CR3BPPropagator(
         method,
@@ -32,6 +33,7 @@ mutable struct CR3BPPropagator <: R3BPPropagator
             method,
             reltol,
             abstol,
+            rhs_cr3bp_sv!
         )
     end
 end
@@ -40,13 +42,14 @@ end
 """
 Propagator for CR3BP with STM
 """
-mutable struct CR3BPPropagatorSTM <: R3BPPropagator
+mutable struct CR3BPPropagatorSTM <: R3BPPropagatorSTM
     problem
     method
     reltol::Float64
     abstol::Float64
+    eom!::Function
 
-    function CR3BPPropagator(
+    function CR3BPPropagatorSTM(
         method,
         mu::Real;
         reltol::Float64=1e-12,
@@ -66,6 +69,7 @@ mutable struct CR3BPPropagatorSTM <: R3BPPropagator
             method,
             reltol,
             abstol,
+            rhs_cr3bp_sv!
         )
     end
 end

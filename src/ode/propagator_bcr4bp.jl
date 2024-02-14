@@ -12,6 +12,7 @@ mutable struct BCR4BPPropagator <: R3BPPropagator
     method
     reltol::Float64
     abstol::Float64
+    eom!::Function
 
     function BCR4BPPropagator(
         method,
@@ -38,6 +39,7 @@ mutable struct BCR4BPPropagator <: R3BPPropagator
             method,
             reltol,
             abstol,
+            rhs_bcr4bp_sv!
         )
     end
 end
@@ -46,14 +48,15 @@ end
 """
 Propagator for BCR4BP with STM
 """
-mutable struct BCR4BPPropagatorSTM <: R3BPPropagator
+mutable struct BCR4BPPropagatorSTM <: R3BPPropagatorSTM
     problem
     parameters
     method
     reltol::Float64
     abstol::Float64
+    eom!::Function
 
-    function BCR4BPPropagator(
+    function BCR4BPPropagatorSTM(
         method,
         mu::Real,
         mu3::Real,
@@ -78,6 +81,7 @@ mutable struct BCR4BPPropagatorSTM <: R3BPPropagator
             method,
             reltol,
             abstol,
+            rhs_bcr4bp_sv!
         )
     end
 end
