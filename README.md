@@ -11,4 +11,5 @@ The scope has been reduced in favor of importability with least amount of depend
 - [x] Collinear libration points
 - [x] Single shooting
 - [x] Multiple shooting
+- [ ] Incorporate BVPProblem from DifferentialEquations.jl
 - [ ] Invariant manifolds
