@@ -6,6 +6,8 @@ module R3BP
 import Roots
 using DifferentialEquations
 using Printf: @printf
+using LinearAlgebra
+using Printf
 
 using AstrodynamicsBase
 

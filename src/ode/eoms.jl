@@ -2,11 +2,6 @@
 Equations of motion in R3BP
 """
 
-using DifferentialEquations
-using LinearAlgebra
-using Distributed
-using Printf
-
 
 # -------------------------------------------------------------------------------- #
 # Equations of motion for CR3BP
