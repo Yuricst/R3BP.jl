@@ -207,7 +207,7 @@ end
 
 
 """
-    get_lagrange_points(μ::Float64)
+    lagrange_points(μ::Float64)
 
 Function computes lagrange points from CR3BP paraneter μ"""
 function lagrange_points(μ::Float64)

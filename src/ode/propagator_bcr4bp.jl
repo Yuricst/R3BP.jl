@@ -109,7 +109,6 @@ function propagate(
                               p = propagator.parameters)
 
     # solve and return results
-    @show modified_problem.p
     return solve(modified_problem,
                  propagator.method;
                  callback = callback,
@@ -140,11 +139,11 @@ function propagate(
     end
 
     # mutate ODEProblem 
-    problem.parameters[3] = t0
+    propagator.parameters[3] = t0
     modified_problem = remake(propagator.problem;
                               u0 = u0_stm,
                               tspan = tspan,
-                              p = problem.parameters)
+                              p = propagator.parameters)
 
     # solve and return results
     return solve(modified_problem,
